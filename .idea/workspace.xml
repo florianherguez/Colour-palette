@@ -28,8 +28,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for methodes_unittest.TestColourMixer">
-    <configuration name="Python tests for methodes_unittest.TestColourMixer" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests for methodes_unittest.TestColourPalette.test">
+    <configuration name="Python tests for methodes_unittest.TestColourPalette" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Colour palette" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -39,11 +39,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;methodes_unittest.TestColourMixer&quot;" />
+      <option name="_new_target" value="&quot;methodes_unittest.TestColourPalette&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for methodes_unittest.TestColourMixer.testSimpleColorGreenBlue11False" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for methodes_unittest.TestColourPalette.test" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Colour palette" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -53,11 +53,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;methodes_unittest.TestColourMixer.testSimpleColorGreenBlue11False&quot;" />
+      <option name="_new_target" value="&quot;methodes_unittest.TestColourPalette.test&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for methodes_unittest.TestColourMixer.testSimpleColorGreenBlue5" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for methodes_unittest.TestColourPalette.testCreatePaletteSimple" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Colour palette" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -67,11 +67,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;methodes_unittest.TestColourMixer.testSimpleColorGreenBlue5&quot;" />
+      <option name="_new_target" value="&quot;methodes_unittest.TestColourPalette.testCreatePaletteSimple&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for methodes_unittest.TestColourMixer.testSimpleColorRedBlue11" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for methodes_unittest.TestColourPalette.testSimpleDarkerColour" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Colour palette" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -81,11 +81,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;methodes_unittest.TestColourMixer.testSimpleColorRedBlue11&quot;" />
+      <option name="_new_target" value="&quot;methodes_unittest.TestColourPalette.testSimpleDarkerColour&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for methodes_unittest.TestColourMixer.testSimpleColorRedGreen11" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for methodes_unittest.TestColourPalette.testSimpleLighterColour" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Colour palette" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -95,17 +95,17 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;methodes_unittest.TestColourMixer.testSimpleColorRedGreen11&quot;" />
+      <option name="_new_target" value="&quot;methodes_unittest.TestColourPalette.testSimpleLighterColour&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for methodes_unittest.TestColourMixer" />
-        <item itemvalue="Python tests.Python tests for methodes_unittest.TestColourMixer.testSimpleColorRedGreen11" />
-        <item itemvalue="Python tests.Python tests for methodes_unittest.TestColourMixer.testSimpleColorGreenBlue5" />
-        <item itemvalue="Python tests.Python tests for methodes_unittest.TestColourMixer.testSimpleColorRedBlue11" />
-        <item itemvalue="Python tests.Python tests for methodes_unittest.TestColourMixer.testSimpleColorGreenBlue11False" />
+        <item itemvalue="Python tests.Python tests for methodes_unittest.TestColourPalette.test" />
+        <item itemvalue="Python tests.Python tests for methodes_unittest.TestColourPalette.testCreatePaletteSimple" />
+        <item itemvalue="Python tests.Python tests for methodes_unittest.TestColourPalette.testSimpleLighterColour" />
+        <item itemvalue="Python tests.Python tests for methodes_unittest.TestColourPalette.testSimpleDarkerColour" />
+        <item itemvalue="Python tests.Python tests for methodes_unittest.TestColourPalette" />
       </list>
     </recent_temporary>
   </component>

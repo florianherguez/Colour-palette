@@ -1,4 +1,3 @@
-from source.colour_palette import ColourPalette
 
 
 if __name__ == '__main__':
