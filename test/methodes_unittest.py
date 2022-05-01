@@ -7,7 +7,9 @@ from source.colour_palette import Palette
 class TestColourPalette(unittest2.TestCase):
     """"Test Class Doc"""
     def testSimpleColourRedGreen11(self):
-        """"Unit Test mixing 11 tone of simple colours : red & green"""
+        """"
+        Unit Test :
+        It mixes 11 tone of simple colours : red & green"""
         red = np.array([255, 0, 0])
         green = np.array([0, 255, 0])
 
@@ -22,7 +24,9 @@ class TestColourPalette(unittest2.TestCase):
         self.assertTrue((expected_color_palette == result_color_palette).all())
 
     def testSimpleColourRedBlue11(self):
-        """"Unit Test mixing 11 tone of simple colours : red & blue"""
+        """"
+        Unit Test :
+        It mixes 11 tones of simple colours : red & blue"""
         red = np.array([255, 0, 0])
         blue = np.array([0, 0, 255])
 
@@ -38,7 +42,9 @@ class TestColourPalette(unittest2.TestCase):
         self.assertTrue((expected_color_palette == result_color_palette).all())
 
     def testSimpleColourGreenBlue11(self):
-        """"Unit Test mixing 11 tone of simple colours : green & blue"""
+        """"
+        Unit Test :
+        It mixes 11 tones of simple colours : green & blue"""
         green = np.array([0, 255, 0])
         blue = np.array([0, 0, 255])
 
@@ -55,7 +61,9 @@ class TestColourPalette(unittest2.TestCase):
         self.assertTrue((expected_color_palette == result_color_palette).all())
 
     def testSimpleColourGreenBlue11False(self):
-        """"Unit Test mixing 11 tone of simple colours : green & blue, with a false expected palette"""
+        """"
+        Unit Test :
+        It mixes 11 tones of simple colours : green & blue, with a false expected palette"""
         green = np.array([0, 255, 0])
         blue = np.array([0, 0, 255])
 
@@ -71,7 +79,9 @@ class TestColourPalette(unittest2.TestCase):
         self.assertFalse((expected_color_palette == result_color_palette).all())
 
     def testSimpleColourGreenBlue5(self):
-        """"Unit Test mixing 5 tone of simple colours : green & blue"""
+        """"
+        Unit Test :
+        It mixes 5 tones of simple colours : green & blue"""
         green = np.array([0, 255, 0])
         blue = np.array([0, 0, 255])
 
@@ -88,9 +98,28 @@ class TestColourPalette(unittest2.TestCase):
 
     @staticmethod
     def isEqualArrayLine(array_line1: np.ndarray, array_line2: np.ndarray) -> bool:
+        """
+        Compare two arrays equality
+
+        Parameters
+        ----------
+        array_line1 : np.ndarray
+            Array containing data, here colors represented as [red, green, blue] (red, green, blue = int)
+        array_line2 : np.ndarray
+            Array containing data, here colors represented as [red, green, blue] (red, green, blue = int)
+
+        Returns
+        -------
+        bool
+            The equality answer
+        """
         return np.array_equal(array_line1, array_line2)
 
     def testSimpleDarkerColour(self):
+        """"
+        Unit Test :
+        It mixes 11 tones of simple colours and create 11 shades of their darker tones: green & blue"""
+
         green = np.array([0, 255, 0])
         blue = np.array([0, 0, 255])
 
@@ -102,9 +131,9 @@ class TestColourPalette(unittest2.TestCase):
         expected_darker_palette = np.array([
             [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]],
             [[0, 51, 0], [0, 46, 4], [0, 41, 9], [0, 37, 13], [0, 32, 18], [0, 25, 25], [0, 18, 32], [0, 13, 37], [0, 9, 41], [0, 4, 46], [0, 0, 51]],
-            [[0, 102, 0], [0, 92, 8], [0, 82, 18], [0, 74, 26], [0, 64, 36], [0, 50, 50], [0, 36, 64], [0, 26, 74], [0, 18, 82], [0, 8, 92], [0, 0, 102]],
-            [[0, 153, 0], [0, 138, 12], [0, 123, 27], [0, 111, 39], [0, 96, 54], [0, 75, 75], [0, 54, 96], [0, 39, 111], [0, 27, 123], [0, 12, 138], [0, 0, 153]],
-            [[0, 204, 0], [0, 184, 16], [0, 164, 36], [0, 148, 52], [0, 128, 72], [0, 100, 100], [0, 72, 128], [0, 52, 148], [0, 36, 164], [0, 16, 184], [0, 0, 204]]
+            [[0, 102, 0], [0, 92, 9], [0, 83, 18], [0, 74, 27], [0, 64, 36], [0, 50, 50], [0, 36, 64], [0, 27, 74], [0, 18, 83], [0, 9, 92], [0, 0, 102]],
+            [[0, 153, 0], [0, 138, 13], [0, 124, 27], [0, 111, 41], [0, 97, 55], [0, 76, 76], [0, 55, 97], [0, 41, 111], [0, 27, 124], [0, 13, 138], [0, 0, 153]],
+            [[0, 204, 0], [0, 184, 18], [0, 166, 36], [0, 148, 55], [0, 129, 73], [0, 101, 101], [0, 73, 129], [0, 55, 148], [0, 36, 166], [0, 18, 184], [0, 0, 204]]
         ])
 
         is_equal = True
@@ -116,6 +145,9 @@ class TestColourPalette(unittest2.TestCase):
         self.assertTrue(is_equal)
 
     def testSimpleLighterColour(self):
+        """"
+        Unit Test :
+        It mixes 11 tones of simple colours and create 11 shades of their lighter tones: green & blue"""
         green = np.array([0, 255, 0])
         blue = np.array([0, 0, 255])
 
@@ -126,23 +158,24 @@ class TestColourPalette(unittest2.TestCase):
         result_lighter_palette = palette.palette
         expected_lighter_palette = np.array(
             [
-                [[51, 255, 51], [51, 255, 74], [51, 255, 97], [51, 236, 120], [51, 213, 143], [51, 178, 178], [51, 143, 213], [51, 120, 236], [51, 97, 255], [51, 74, 255], [51, 51, 255]],
-                [[102, 255, 102], [102, 255, 125], [102, 255, 148], [102, 255, 171], [102, 255, 194], [102, 229, 229], [102, 194, 255], [102, 171, 255], [102, 148, 255], [102, 125, 255], [102, 102, 255]],
-                [[153, 255, 153], [153, 255, 176], [153, 255, 199], [153, 255, 222], [153, 255, 245], [153, 255, 255], [153, 245, 255], [153, 222, 255], [153, 199, 255], [153, 176, 255], [153, 153, 255]],
-                [[204, 255, 204], [204, 255, 227], [204, 255, 250], [204, 255, 255], [204, 255, 255], [204, 255, 255], [204, 255, 255], [204, 255, 255], [204, 250, 255], [204, 227, 255], [204, 204, 255]],
+                [[51, 255, 51], [51, 235, 69], [51, 217, 87], [51, 199, 106], [51, 180, 124], [51, 152, 152], [51, 124, 180], [51, 106, 199], [51, 87, 217], [51, 69, 235], [51, 51, 255]],
+                [[102, 255, 102], [102, 240, 115], [102, 226, 129], [102, 213, 143], [102, 199, 157], [102, 178, 178], [102, 157, 199], [102, 143, 213], [102, 129, 226], [102, 115, 240], [102, 102, 255]],
+                [[153, 255, 153], [153, 245, 162], [153, 236, 171], [153, 227, 180], [153, 217, 189], [153, 203, 203], [153, 189, 217], [153, 180, 227], [153, 171, 236], [153, 162, 245], [153, 153, 255]],
+                [[204, 255, 204], [204, 250, 208], [204, 245, 213], [204, 241, 217], [204, 236, 222], [204, 229, 229], [204, 222, 236], [204, 217, 241], [204, 213, 245], [204, 208, 250], [204, 204, 255]],
                 [[255, 255, 255], [255, 255, 255], [255, 255, 255], [255, 255, 255], [255, 255, 255], [255, 255, 255], [255, 255, 255], [255, 255, 255], [255, 255, 255], [255, 255, 255], [255, 255, 255]]
-            ]
-        )
+            ])
 
         is_equal = True
         line = 0
         while is_equal and line < 5:
             is_equal = self.isEqualArrayLine(expected_lighter_palette[line], result_lighter_palette[6 + line])
             line += 1
-
         self.assertTrue(is_equal)
 
     def testCreatePaletteSimple(self):
+        """"
+        Unit Test :
+        It mixes 11 tones of simple colours and make 11 shades of their darker & lighter tones to create the all palette: green & blue"""
         green = np.array([0, 255, 0])
         blue = np.array([0, 0, 255])
 
@@ -155,17 +188,16 @@ class TestColourPalette(unittest2.TestCase):
             [
                 [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]],
                 [[0, 51, 0], [0, 46, 4], [0, 41, 9], [0, 37, 13], [0, 32, 18], [0, 25, 25], [0, 18, 32], [0, 13, 37], [0, 9, 41], [0, 4, 46], [0, 0, 51]],
-                [[0, 102, 0], [0, 92, 8], [0, 82, 18], [0, 74, 26], [0, 64, 36], [0, 50, 50], [0, 36, 64], [0, 26, 74], [0, 18, 82], [0, 8, 92], [0, 0, 102]],
-                [[0, 153, 0], [0, 138, 12], [0, 123, 27], [0, 111, 39], [0, 96, 54], [0, 75, 75], [0, 54, 96], [0, 39, 111], [0, 27, 123], [0, 12, 138], [0, 0, 153]],
-                [[0, 204, 0], [0, 184, 16], [0, 164, 36], [0, 148, 52], [0, 128, 72], [0, 100, 100], [0, 72, 128], [0, 52, 148], [0, 36, 164], [0, 16, 184], [0, 0, 204]],
+                [[0, 102, 0], [0, 92, 9], [0, 83, 18], [0, 74, 27], [0, 64, 36], [0, 50, 50], [0, 36, 64], [0, 27, 74], [0, 18, 83], [0, 9, 92], [0, 0, 102]],
+                [[0, 153, 0], [0, 138, 13], [0, 124, 27], [0, 111, 41], [0, 97, 55], [0, 76, 76], [0, 55, 97], [0, 41, 111], [0, 27, 124], [0, 13, 138], [0, 0, 153]],
+                [[0, 204, 0], [0, 184, 18], [0, 166, 36], [0, 148, 55], [0, 129, 73], [0, 101, 101], [0, 73, 129], [0, 55, 148], [0, 36, 166], [0, 18, 184], [0, 0, 204]],
 
                 [[0, 255, 0], [0, 231, 23], [0, 208, 46], [0, 185, 69], [0, 162, 92], [0, 127, 127], [0, 92, 162], [0, 69, 185], [0, 46, 208], [0, 23, 231], [0, 0, 255]],
 
-                [[51, 255, 51], [51, 255, 74], [51, 255, 97], [51, 236, 120], [51, 213, 143], [51, 178, 178], [51, 143, 213], [51, 120, 236], [51, 97, 255], [51, 74, 255], [51, 51, 255]],
-                [[102, 255, 102], [102, 255, 125], [102, 255, 148], [102, 255, 171], [102, 255, 194], [102, 229, 229], [102, 194, 255], [102, 171, 255], [102, 148, 255], [102, 125, 255], [102, 102, 255]],
-                [[153, 255, 153], [153, 255, 176], [153, 255, 199], [153, 255, 222], [153, 255, 245], [153, 255, 255], [153, 245, 255], [153, 222, 255], [153, 199, 255], [153, 176, 255], [153, 153, 255]],
-                [[204, 255, 204], [204, 255, 227], [204, 255, 250], [204, 255, 255], [204, 255, 255], [204, 255, 255], [204, 255, 255], [204, 255, 255], [204, 250, 255], [204, 227, 255], [204, 204, 255]],
-
+                [[51, 255, 51], [51, 235, 69], [51, 217, 87], [51, 199, 106], [51, 180, 124], [51, 152, 152], [51, 124, 180], [51, 106, 199], [51, 87, 217], [51, 69, 235], [51, 51, 255]],
+                [[102, 255, 102], [102, 240, 115], [102, 226, 129], [102, 213, 143], [102, 199, 157], [102, 178, 178], [102, 157, 199], [102, 143, 213], [102, 129, 226], [102, 115, 240], [102, 102, 255]],
+                [[153, 255, 153], [153, 245, 162], [153, 236, 171], [153, 227, 180], [153, 217, 189], [153, 203, 203], [153, 189, 217], [153, 180, 227], [153, 171, 236], [153, 162, 245], [153, 153, 255]],
+                [[204, 255, 204], [204, 250, 208], [204, 245, 213], [204, 241, 217], [204, 236, 222], [204, 229, 229], [204, 222, 236], [204, 217, 241], [204, 213, 245], [204, 208, 250], [204, 204, 255]],
                 [[255, 255, 255], [255, 255, 255], [255, 255, 255], [255, 255, 255], [255, 255, 255], [255, 255, 255], [255, 255, 255], [255, 255, 255], [255, 255, 255], [255, 255, 255], [255, 255, 255]]
             ]
         )
@@ -182,7 +214,7 @@ class TestColourPalette(unittest2.TestCase):
         red = np.array([255, 0, 0])
         blue = np.array([0, 0, 255])
 
-        palette = Palette(red, blue, 5)
+        palette = Palette(red, blue, 21)
         palette.createPalette()
         result_palette = palette.palette
 

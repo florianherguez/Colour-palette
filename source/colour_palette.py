@@ -72,16 +72,19 @@ class Palette(object):
         darker_shade = self.colour_palette // self.middle_palette
 
         for darker_colour in range(self.middle_palette):
-            self.palette[darker_colour] = (self.black + (darker_colour * darker_shade)).clip(min=0)
+            darker_palette_line = ((self.middle_palette - darker_colour) * self.black + darker_colour * self.colour_palette) // self.middle_palette
+            self.palette[darker_colour] = darker_palette_line.clip(min=0)
 
-    def mixingColoursLighter(self) -> None:  #pbl here
+    def mixingColoursLighter(self) -> None:
         """
         Methode which takes a color and make lighter tones of it
         """
         lighter_shading = self.white // self.middle_palette
 
         for lighter_colour in range(1, self.middle_palette):
-            self.palette[self.middle_palette + lighter_colour] = (self.colour_palette + lighter_colour * lighter_shading).clip(max=255)
+            lighter_palette_line = ((self.middle_palette - lighter_colour) * self.colour_palette + lighter_colour * self.white) // self.middle_palette
+            self.palette[self.middle_palette + lighter_colour] = lighter_palette_line.clip(max=255)
+
         self.palette[self.nb_tone - 1] = self.white
 
     def generatePaletteLine(self, palette_line: np.ndarray) -> Image:
